@@ -9,7 +9,7 @@
 ###### **Instrutor :** Mayk Brito
 
 ## Instruções : 
-Para iniciar o srvidor da aplicação use o comando _npm run dev_ então acesse pelo navegador _http://127.0.0.1:5500/_ 
+Para iniciar o servidor da aplicação use o comando **_npm run dev_** então acesse pelo navegador **_http://127.0.0.1:5500/_** 
 
 ## **Tecnologias utilizadas**
 - HTML - Front-End;
