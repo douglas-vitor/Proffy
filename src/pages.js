@@ -74,11 +74,11 @@ async function saveClasses(req, res) {
         const db = await Database
         await createProffy(db, { proffyValue, classValue, classScheduleValues })
 
-        let queryString = "?subject=" + req.body.subject
-        queryString += "&weekday=" + req.body.weekday[0]
-        queryString += "&time=" + req.body.time_from[0]
+        let queryStringSubject = "?subject=" + req.body.subject
+        let queryStringWeekday = "weekday=" + req.body.weekday[0]
+        let queryStringTime = "time=" + req.body.time_from[0]
 
-        return res.redirect("/study" + queryString)
+        return res.render("success.html", { queryStringSubject, queryStringWeekday, queryStringTime })
     } catch (error) {
         console.log(error)
     }
@@ -86,9 +86,14 @@ async function saveClasses(req, res) {
 
 }
 
+function pageSuccess(req, res) {
+    res.render("success.html")
+}
+
 module.exports = {
     pageLanding,
     pageStudy,
     pageGiveClasses,
-    saveClasses
+    saveClasses,
+    pageSuccess
 }
